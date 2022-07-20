@@ -9,15 +9,23 @@ let package = Package(
         .iOS(.v11)
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SygicMaps",
-            targets: ["SygicMaps"]),
+            targets: ["SygicMapsDependencyWrapper", "SygicMaps"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/olavrushkosygic/SygicAuthSPM.git", .upToNextMajor(from: "1.3.1"))
+        .package(
+            name: "SygicAuth",
+            url: "https://github.com/olavrushkosygic/SygicAuthSPM.git",
+            .upToNextMajor(from: "1.3.1")
+        )
     ],
     targets: [
+        .target(
+            name: "SygicMapsDependencyWrapper",
+            dependencies: [
+                .product(name: "SygicAuth", package: "SygicAuth")
+            ]),
         .binaryTarget(
             name: "SygicMaps",
             url: "https://public.repo.sygic.com/repository/maven-sygic-releases/com/sygic/sdk/maps-ios/21.0.3/maps-ios-21.0.3.zip",

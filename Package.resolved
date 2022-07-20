@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SygicAuth",
+        "repositoryURL": "https://github.com/olavrushkosygic/SygicAuthSPM.git",
+        "state": {
+          "branch": null,
+          "revision": "e1963d700ca4585b7f663038415fe32652b2b4c1",
+          "version": "1.3.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
