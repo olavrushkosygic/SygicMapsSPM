@@ -3,6 +3,14 @@
 
 import PackageDescription
 
+let fullVersion = "21.1.0-nightly.20220721.826"
+let packageChecksum = "3f7f50c70dc5aa85fbb16de992eb9301e903d70dbacc866d4d3b6bae6eea20fb"
+
+let publicUrl = "https://public.repo.sygic.com/repository/maven-sygic-releases/com/sygic/sdk/maps-ios/\(fullVersion)/maps-ios-\(fullVersion).zip"
+let internalUrl = "https://repository.sygic.com/repository/maven-public/com/sygic/sdk/maps-ios/\(fullVersion)/maps-ios-\(fullVersion).zip"
+
+let packageUrl = internalUrl
+
 let package = Package(
     name: "SygicMaps",
     platforms: [
@@ -28,7 +36,7 @@ let package = Package(
             ]),
         .binaryTarget(
             name: "SygicMaps",
-            url: "https://public.repo.sygic.com/repository/maven-sygic-releases/com/sygic/sdk/maps-ios/21.0.3/maps-ios-21.0.3.zip",
-            checksum: "563810da6346230ac984894709fa4dc2d0a61cdcb100f6e511d6070121a5e258")
+            url: packageUrl,
+            checksum: packageChecksum)
     ]
 )
