@@ -3,8 +3,8 @@
 
 import PackageDescription
 
-let fullVersion = "21.1.0-nightly.20220721.826"
-let packageChecksum = "3f7f50c70dc5aa85fbb16de992eb9301e903d70dbacc866d4d3b6bae6eea20fb"
+let fullVersion = "21.1.0-nightly.20220720.825"
+let packageChecksum = "99165bec3998b789ede6e86191629a92507eed7f561f45cf9c35516765cc10bf"
 
 let publicUrl = "https://public.repo.sygic.com/repository/maven-sygic-releases/com/sygic/sdk/maps-ios/\(fullVersion)/maps-ios-\(fullVersion).zip"
 let internalUrl = "https://repository.sygic.com/repository/maven-public/com/sygic/sdk/maps-ios/\(fullVersion)/maps-ios-\(fullVersion).zip"
